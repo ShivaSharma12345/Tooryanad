@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            flex-wrap: wrap;
+        }
+
+        div {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .one {
+            background-image: url(1st\ page.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .nav {
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            place-items: center;
+            position: absolute;
+            height: 80px;
+            width: 100%;
+            border: 2px none white;
+            z-index: 2;
+            /*Added this to fix the banner issue*/
+
+        }
+
+        .logo {
+            font-family: "Baloo 2";
+            text-decoration: solid;
+            left: 70px;
+            position: absolute;
+            padding: 4px;
+            font-size: 30px;
+            color: white;
+            font-style: italic;
+        }
+
+        .navigators {
+            color: white;
+            text-decoration: none;
+            padding: 30px;
+            font-family: "Baloo 2";
+            font-size: 20px;
+        }
+
+        .banner {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: #fffbd9;
+            font-size: 32px;
+            font-family: sans-serif;
+            text-decoration: solid;
+        }
+
+        h1 {
+            margin: 5px;
+            padding: 3px;
+        }
+
+        p {
+            margin-top: 20px;
+            font-family: "Poppins";
+            font-size: 22px;
+            color: #ffffff73;
+        }
+
+        .bigbutton {
+            background-image: linear-gradient(to right, #a2533d, #bb816b);
+            position: absolute;
+            top: 73%;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            height: 43px;
+            width: 200px;
+            border: 2px none;
+            border-radius: 9px
+        }
+
+        .smallbutton {
+            right: 130px;
+            background-image: linear-gradient(to right, #a2533d, #bb816b);
+            position: absolute;
+            padding: 3px;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            height: 43px;
+            width: 110px;
+            border: 2px none;
+            border-radius: 9px;
+        }
+
+        .smallbutton2 {
+            gap: 2px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 10px;
+            background-image: linear-gradient(to right, #a2533d, #bb816b);
+            position: absolute;
+            font-size: 10px;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            height: 43px;
+            width: 110px;
+            border: 2px none;
+            border-radius: 9px;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+
+            text-align: center;
+        }
+
+        .two {
+
+            height: 100vh;
+            background-color: #fffbd8;
+        }
+
+        hr {
+            border-radius: 6px;
+            position: absolute;
+            width: 90%;
+            margin-top: 48px;
+            margin-left: 5%;
+            margin-right: 5%;
+            height: 10px;
+            background-color: #a2533d;
+        }
+
+        .heading {
+            padding: 0px 24px 0px 24px;
+            background-color: #fffbd8;
+            font-size: 24px;
+            left: 50%;
+            transform: translate(-50%, 0px);
+            margin-top: 0px;
+            position: absolute;
+            display: grid;
+            place-items: center;
+            color: #ab7b68e8;
+            height: 100px;
+            width: 300px;
+        }
+
+        .cards {
+            gap: 5%;
+            padding: 12px;
+            display: flex;
+            /* border: 2px solid black; */
+            right: 4%;
+            left: 3.9%;
+            top: 20%;
+            position: relative;
+            height: 75%;
+            width: 92%
+        }
+
+        .c1,
+        .c2,
+        .c3,
+        .c4 {
+            box-shadow: 0 0 16px 0px black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0px;
+            background-color: #be8365;
+            border-radius: 26px;
+            position: relative;
+            left: 2px;
+            width: 20%;
+            height: 95%;
+
+        }
+
+        .cardimg {
+            position: relative;
+            height: 37%;
+            width: 92%;
+            top: 2%;
+            left: 2px;
+            border-radius: 24px;
+        }
+
+        .crdtitle {
+            top: 21px;
+            text-decoration: solid;
+            left: -27px;
+            position: relative;
+            margin: 0px;
+            font-family: "Baloo 2";
+            color: white;
+            font-size: 35px;
+        }
+
+        .crdtext {
+            left: 0px;
+            top: 10px;
+            position: relative;
+            margin-top: 0px;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        .price {
+            top: 85%;
+            left: 19px;
+            position: absolute;
+            font-family: "Baloo 2";
+            color: white;
+            font-size: 30px;
+        }
+
+        #order {
+            background-image: none;
+            background-color: #a2533d;
+            top: 85%;
+            right: 22px;
+        }
+
+        .three {
+            background-color: #fffbd8;
+
+            height: 100vh;
+
+        }
+
+        .four {
+            position: absolute;
+            background-color: #be8365;
+            height: 100vh;
+
+        }
+
+        #fourth {
+            background-color: #be8365;
+            color: white;
+        }
+
+        #line {
+            background-color: white;
+        }
+
+        .content {
+            display: flex;
+            position: relative;
+            left: 5%;
+            top: 19%;
+            height: 60%;
+            width: 90%;
+
+        }
+
+        #fifth {
+            position: absolute;
+            top: 90%;
+            background-color: #be8365;
+            color: white;
+        }
+
+        #linelast {
+            top: 16%;
+            position: relative;
+            background-color: white;
+        }
+
+        .footer {
+            position: absolute;
+            top: 77%;
+            background-color: white;
+        }
+
+        #end {
+            font-family: "Baloo 2";
+            text-decoration: solid;
+            left: 70px;
+            position: absolute;
+            padding: 4px;
+            font-size: 20px;
+            color: white;
+            font-style: italic;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, 0px);
+        }
+
+        .l1,
+        .l2,
+        .l3,
+        .l4 {
+            display: flex;
+            gap: 20px;
+            font-family: "Baloo 2";
+            place-items: center;
+            width: 25%;
+            height: 90%;
+
+        }
+
+        #list {
+            position: absolute;
+            font-family: "Baloo 2";
+            font-size: 30px;
+            text-decoration: solid;
+            color: white;
+
+        }
+
+        li {
+            list-style-type: none;
+            margin-left: 0px;
+            text-decoration: none;
+            font-size: 18px;
+
+        }
+
+        .follow {
+            top: 110px;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main {
+            display: flex;
+            position: relative;
+            align-items: center;
+
+            left: 5%;
+            top: 19%;
+            height: 60%;
+            width: 90%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one" id="one">
+        <div class="nav">
+            <span class="logo">
+                Filtro
+            </span>
+            <button class="smallbutton">Sign up/Login</button>
+            <button class="smallbutton2"><img src="icons8-apple-logo-50.png"></img>Get the app</button>
+            <a href="#one" class="navigators">Home</a>
+            <a href="#two" class="navigators">Explore Us</a>
+            <a href="#three" class="navigators">Brand</a>
+            <a href="#four" class="navigators">Contact Us</a>
+
+        </div>
+        <div class="banner">
+            <h1>Power up with coffee</h1>
+            <p>Start your ecxiting day with a cup of Brew Coffee</p>
+            <button class="bigbutton">Explore Us</button>
+        </div>
+    </div>
+    <div class="two" id="two">
+        <hr>
+        <p class="heading">Explore the Coffee world</p>
+        <div class="cards">
+            <div class="c1">
+                <img src="image1.JPG" alt="" class="cardimg">
+                <p class="crdtitle">Cappacino</p>
+                <p class="crdtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consectetur
+                    architecto incidunt atque quibusdam dignissimos quaerat similique quia eius! Ratione animi eius
+                    molestias.
+                </p>
+                <span class="price">$8.60</span>
+                <button class="smallbutton" id="order">Buy Now</button>
+            </div>
+            <div class="c2">
+                <img src="image1.JPG" alt="" class="cardimg">
+                <p class="crdtitle">Cappacino</p>
+                <p class="crdtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consectetur
+                    architecto incidunt atque quibusdam dignissimos quaerat similique quia eius! Ratione animi eius
+                    molestias.
+                </p>
+                <span class="price">$8.60</span>
+                <button class="smallbutton" id="order">Buy Now</button>
+            </div>
+            <div class="c3"><img src="image1.JPG" alt="" class="cardimg">
+                <p class="crdtitle">Cappacino</p>
+                <p class="crdtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consectetur
+                    architecto incidunt atque quibusdam dignissimos quaerat similique quia eius! Ratione animi eius
+                    molestias.
+                </p>
+                <span class="price">$8.60</span>
+                <button class="smallbutton" id="order">Buy Now</button>
+            </div>
+            <div class="c4"><img src="image1.JPG" alt="" class="cardimg">
+                <p class="crdtitle">Cappacino</p>
+                <p class="crdtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consectetur
+                    architecto incidunt atque quibusdam dignissimos quaerat similique quia eius! Ratione animi eius
+                    molestias.
+                </p>
+                <span class="price">$8.60</span>
+                <button class="smallbutton" id="order">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="three" id="three">
+        <hr>
+        <p class="heading">Brands We Work With</p>
+        <div class="main">
+            <img src="starbucks-logo-png-1666.png" height="50%" width="100%">
+            <img src="nescafe.JPG" height="25%" width="100%">
+            <img src="hortons.JPG" height="40%" width="100%">
+            <img src="dunkin.JPG" height="80%" width="90%">
+        </div>
+
+
+    </div>
+    <div class="four" id="four">
+        <hr id="line">
+        <p class="heading" id="fourth">Get in Touch with Us</p>
+        <div class="content">
+            <div class="l1"><span id="list">Merchandise
+                    <ul>
+                        <li>T-shirts</li>
+                    </ul>
+                    <ul>
+                        <li>Caps</li>
+                    </ul>
+                    <ul>
+                        <li>Masks</li>
+                    </ul>
+                </span></div>
+            <div class="l2"><span id="list">Franchise
+                    <ul>
+                        <li>Coffee Outlets</li>
+                    </ul>
+                    <ul>
+                        <li>Coffee Vending Machine</li>
+                    </ul>
+                    <ul>
+                        <li>Contact Us</li>
+                    </ul>
+                </span></div>
+            <div class="l3"><span id="list" class="follow">About Us
+                    <ul>
+                        <li>Promotion</li>
+                    </ul>
+                    <ul>
+                        <li>Customer Care</li>
+                    </ul>
+                    <ul>
+                        <li>Legal Information</li>
+                    </ul>
+                    <ul>
+                        <li>Achievements</li>
+                    </ul>
+                    <ul>
+                        <li>Careers</li>
+                    </ul>
+                </span></div>
+            <div class="l4"><span id="list" class="follow">Follow Us</span>
+                <a href="https://www.instagram.com/" class="icons"><img src="instagram-167-svgrepo-com.svg"
+                        height="20px" width="20px"></a>
+                <a href="https://www.instagram.com/" class="icons"><img src="facebook-svgrepo-com.svg" height="20px"
+                        width="20px"></a>
+                <a href="https://www.instagram.com/" class="icons"><img src="twitter-svgrepo-com.svg" height="20px"
+                        width="20px"></a>
+                <a href="https://www.instagram.com/" class="icons"><img src="pinterest-svgrepo-com.svg" height="20px"
+                        width="20px"></a>
+            </div>
+        </div>
+        <hr class="footer">
+        <span id="end">
+            <img src="copyright-28797.png" height="15px" width="15px"> Filtro &nbsp;&nbsp;&nbsp;&nbsp;All right reserved
+        </span>
+
+    </div>
+</body>
+
+</html>
